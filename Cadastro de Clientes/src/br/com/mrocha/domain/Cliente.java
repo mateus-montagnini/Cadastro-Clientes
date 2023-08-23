@@ -96,4 +96,5 @@ public class Cliente {
                 "nome= " + nome + '\'' +
                 ", cpf= " + cpf;
     }
+
 }
