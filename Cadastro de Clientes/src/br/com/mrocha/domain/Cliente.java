@@ -11,12 +11,12 @@ public class Cliente {
     private String cidade;
     private String estado;
 
-    public Cliente(String nome, long cpf, long tel, String end, int numero, String cidade, String estado) {
+    public Cliente(String nome, String cpf, String tel, String end, String numero, String cidade, String estado) {
         this.nome = nome;
-        this.cpf = Long.valueOf(cpf);
-        this.tel = Long.valueOf(tel);
+        this.cpf = Long.valueOf(cpf.trim());
+        this.tel = Long.valueOf(tel.trim());
         this.end = end;
-        this.numero = numero;
+        this.numero = Integer.valueOf(numero.trim());
         this.cidade = cidade;
         this.estado = estado;
     }
@@ -92,9 +92,8 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "br.com.mrocha.domain.Cliente{" +
-                "nome='" + nome + '\'' +
-                ", cpf=" + cpf +
-                '}';
+        return "Cliente " +
+                "nome= " + nome + '\'' +
+                ", cpf= " + cpf;
     }
 }
